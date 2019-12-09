@@ -1,0 +1,30 @@
+﻿<Window x:Class="NotifyToAction.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NotifyToAction"
+        mc:Ignorable="d"
+        Title="Automaton" Height="450" Width="800" Background="#FF333333" ContentRendered="Window_ContentRendered" Closing="Window_Closing" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TabControl HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="772">
+            <TabItem x:Name="Notificators" Header="Notificators">
+                <Grid Background="#FFE5E5E5">
+                    <ListView HorizontalAlignment="Left" Height="306" Margin="10,10,0,0" VerticalAlignment="Top" Width="708">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <Button Content="Add" HorizontalAlignment="Left" Margin="10,321,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button Content="Remove" HorizontalAlignment="Left" Margin="90,321,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button Content="Edit" HorizontalAlignment="Left" Margin="170,321,0,0" VerticalAlignment="Top" Width="75"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="Actions" Header="Actions">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
