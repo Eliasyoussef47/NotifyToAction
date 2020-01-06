@@ -9,10 +9,17 @@ namespace NotifyToAction
 {
     class RegisteredSenderTriggers
     {
+        [JsonConstructor]
+        public RegisteredSenderTriggers()
+        {
+            SenderId = "";
+            RegisteredTriggers = new List<RegisteredTrigger>();
+        }
+
         [JsonProperty("senderId", Order = 0, Required = Required.Always)]
         public string SenderId;
 
         [JsonProperty("registeredTriggers", Order = 1, Required = Required.AllowNull)]
-        public List<RegisteredTrigger> RegisteredTriggers = new List<RegisteredTrigger>();
+        public List<RegisteredTrigger> RegisteredTriggers;
     }
 }

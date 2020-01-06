@@ -5,18 +5,22 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace NotifyToAction
 {
-    class TcpConnector
+    abstract class TcpConnector : IDisposable
     {
         public TcpConnector(IPAddress serverAddress, int serverPort)
         {
             ServerAddress = serverAddress;
             ServerPort = serverPort;
+            Client = new TcpClient();
             Connect();
+            Stream = Client.GetStream();
+            Stream.ReadTimeout = 5000;
         }
         
         public TcpConnector(NetworkStream stream)
@@ -24,18 +28,16 @@ namespace NotifyToAction
             Stream = stream;
         }
 
-        TcpClient Client;
-        NetworkStream Stream;
-        IPAddress ServerAddress;
-        int ServerPort;
+        protected TcpClient Client;
+        protected NetworkStream Stream;
+        protected IPAddress ServerAddress;
+        protected int ServerPort;
 
         public void Connect()
         {
             try
             {
-                Client = new TcpClient();
                 Client.Connect(ServerAddress, ServerPort);
-                Stream = Client.GetStream();
             }
             catch (System.Net.Sockets.SocketException ex)
             {
@@ -43,17 +45,10 @@ namespace NotifyToAction
             }
         }
 
-        public string SendMessage(string message)
+        public virtual void Dispose()
         {
-            using (StreamWriter sw = new StreamWriter(Stream))
-            {
-                sw.Write(message);
-            }
-
-            using (StreamReader sr = new StreamReader(Stream))
-            {
-                return sr.ReadToEnd();
-            }
+            ((IDisposable)Client).Dispose();
+            ((IDisposable)Stream).Dispose();
         }
     }
 }

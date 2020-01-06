@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -25,18 +26,33 @@ namespace NotifyToAction
             InitializeComponent();
         }
 
+        //public static Log MyLog = new Log(DirectoryPathIds.AppDataFolder);
+
         private void Window_ContentRendered(object sender, EventArgs e)
         {
-            ConfigFile configFile = new ConfigFile();
-            configFile.Test = "YOYO";
-            configFile.Save();
-            MessageHandler.Server.Start();
+            //Configs configs = ConfigsTools.GetConfigs<Configs>();
+            //configs.Test = "YOYO";
+            //RegisteredTrigger registeredTrigger = new RegisteredTrigger();
+            //registeredTrigger.TriggerId = "DoorOpened";
+            //RegisteredTriggerAction action = new RegisteredTriggerAction("YeelightMethods", "Toggle", null);
+            //registeredTrigger.Actions.Add(action);
+            //RegisteredSenderTriggers registeredSenderTriggers = new RegisteredSenderTriggers();
+            //registeredSenderTriggers.SenderId = "DoorSensor";
+            //List<RegisteredTrigger> registeredTriggers = new List<RegisteredTrigger>();
+            //registeredTriggers.Add(registeredTrigger);
+            //registeredSenderTriggers.RegisteredTriggers = registeredTriggers;
+            //configs.RegisteredSenderTriggers.Add(registeredSenderTriggers);
+            //configs.Save();
+
+            //MessageHandler.Server.Start();
             MessageHandler.Accept();
+
+           
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            MessageHandler.Server.Stop();
+            //MessageHandler.Server.Stop();
         }
     }
 }

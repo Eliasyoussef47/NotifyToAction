@@ -11,7 +11,7 @@ namespace NotifyToAction
     class RequestMessage : Message
     {
         [JsonProperty("senderId", Order = 1, Required = Required.Always)]
-        public readonly string SenderId;
+        public string SenderId;
         [JsonProperty("method", Order = 2, Required = Required.Always)]
         public string Method;
         [JsonProperty("parameters", NullValueHandling = NullValueHandling.Include, Order = 3, Required = Required.AllowNull)]
