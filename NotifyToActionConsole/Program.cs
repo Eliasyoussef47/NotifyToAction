@@ -8,7 +8,10 @@ namespace NotifyToActionConsole
         {
             Console.WriteLine("Hello World!");
             MessageHandler.Accept();
-            Console.ReadLine();
+            while (true)
+            {
+                Console.ReadKey();
+            };
         }
     }
 }

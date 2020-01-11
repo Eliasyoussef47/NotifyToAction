@@ -63,12 +63,12 @@ namespace NotifyToAction
         {
             TurnOn();
             Bright();
-            Task.Delay(142).ContinueWith(t => Blue());
-            Task.Delay(284).ContinueWith(t => Red());
-            Task.Delay(426).ContinueWith(t => Blue());
-            Task.Delay(568).ContinueWith(t => Red());
-            Task.Delay(710).ContinueWith(t => Default());
-            Task.Delay(800).ContinueWith(t => Dispose());
+            Task.Delay(200).ContinueWith(t => Blue());
+            Task.Delay(400).ContinueWith(t => Red());
+            Task.Delay(600).ContinueWith(t => Blue());
+            Task.Delay(800).ContinueWith(t => Red());
+            Task.Delay(1000).ContinueWith(t => Default());
+            Task.Delay(1200).ContinueWith(t => Dispose());
         }
     }
 }
