@@ -43,16 +43,13 @@ namespace NotifyToAction
             //registeredSenderTriggers.RegisteredTriggers = registeredTriggers;
             //configs.RegisteredSenderTriggers.Add(registeredSenderTriggers);
             //configs.Save();
-
-            //MessageHandler.Server.Start();
+            
             MessageHandler.Accept();
-
-           
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            //MessageHandler.Server.Stop();
+            MessageHandler.UdpClient.Dispose();
         }
     }
 }

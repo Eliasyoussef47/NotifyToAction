@@ -61,17 +61,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Configs.cs" />
-    <Compile Include="ConfigsTools.cs" />
-    <Compile Include="Log.cs" />
-    <Compile Include="Methods.cs" />
-    <Compile Include="RegisteredSenderTriggers.cs" />
-    <Compile Include="RegisteredTrigger.cs" />
-    <Compile Include="RequestMessage.cs" />
-    <Compile Include="ResponseMessage.cs" />
-    <Compile Include="TcpConnector.cs" />
-    <Compile Include="TcpSender.cs" />
-    <Compile Include="YeelightMethods.cs" />
+    <Compile Include="Configs\Configs.cs" />
+    <Compile Include="Configs\ConfigsTools.cs" />
+    <Compile Include="JsonClasses\Configs\RegisteredSenderTriggers.cs" />
+    <Compile Include="Tools\Log.cs" />
+    <Compile Include="Methods\Methods.cs" />
+    <Compile Include="JsonClasses\Configs\RegisteredTrigger.cs" />
+    <Compile Include="JsonClasses\Messages\RequestMessage.cs" />
+    <Compile Include="JsonClasses\Messages\ResponseMessage.cs" />
+    <Compile Include="Tools\TcpConnector.cs" />
+    <Compile Include="Tools\TcpSender.cs" />
+    <Compile Include="Methods\YeelightMethods.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -86,9 +86,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Message.cs" />
-    <Compile Include="MessageHandler.cs" />
-    <Compile Include="MessageMethods.cs" />
+    <Compile Include="JsonClasses\Messages\Message.cs" />
+    <Compile Include="Tools\MessageHandler.cs" />
+    <Compile Include="Tools\MessageMethods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -116,5 +116,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

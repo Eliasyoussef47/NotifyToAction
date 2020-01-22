@@ -18,7 +18,7 @@ namespace NotifyToAction
             {
                 foreach (RegisteredTriggerAction action in registeredTrigger.Actions)
                 {
-                    Type theType = System.Reflection.Assembly.GetExecutingAssembly().GetType("NotifyToActionConsole." + action.TypeName);
+                    Type theType = System.Reflection.Assembly.GetExecutingAssembly().GetType("NotifyToAction." + action.TypeName);
                     var theInstance = Activator.CreateInstance(theType);
                     MethodInfo theMethod = theType.GetMethod(action.MethodName);
                     if (action.MethodParameters == null)
