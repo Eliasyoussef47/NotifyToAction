@@ -5,6 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NotifyToAction"
         mc:Ignorable="d"
-        Title="NotifyToAction" Height="450" Width="800" Background="#FF333333" ContentRendered="Window_ContentRendered" Closing="Window_Closing" WindowStartupLocation="CenterScreen">
+        Title="NotifyToAction" Height="450" Width="800" Background="#FF333333" ContentRendered="Window_ContentRendered" Closing="Window_Closing" WindowStartupLocation="CenterScreen" Icon="{DynamicResource ImageSource2}">
+    <Window.Resources>
+        <BitmapImage x:Key="ImageSource2" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="C:\Users\d-s-a\source\repos\NotifyToAction\NotifyToAction\Resources\NotifyToAction-Icon3.ico"/>
+    </Window.Resources>
     <Grid/>
 </Window>
