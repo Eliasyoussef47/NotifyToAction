@@ -31,8 +31,14 @@ namespace NotifyToAction
         }
 
 
-        [JsonProperty("registeredSenderTriggers")]
+        [JsonProperty("registeredSenderTriggers", Required = Required.AllowNull)]
         public List<RegisteredSenderTriggers> RegisteredSenderTriggers { get; set; }
+
+        [JsonProperty("yeelightLampIp", Required = Required.Default)]
+        public string YeelightLampIp { get; set; }
+
+        [JsonProperty("pushbulletAccessToken", Required = Required.AllowNull)]
+        public string PushbulletAccessToken { get; set; }
 
         [JsonProperty("test", Required = Required.AllowNull)]
         public string Test { get; set; }

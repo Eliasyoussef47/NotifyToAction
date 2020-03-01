@@ -42,6 +42,7 @@ namespace NotifyToAction
             //registeredTriggers.Add(registeredTrigger);
             //registeredSenderTriggers.RegisteredTriggers = registeredTriggers;
             //configs.RegisteredSenderTriggers.Add(registeredSenderTriggers);
+            //configs.YeelightLampIp = "192.168.2.15";
             //configs.Save();
             
             MessageHandler.Accept();

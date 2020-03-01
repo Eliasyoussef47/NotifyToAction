@@ -16,7 +16,7 @@ namespace NotifyToAction
 
         }
 
-        public YeelightMethods() : base(IPAddress.Parse("192.168.2.15"), 55443)
+        public YeelightMethods() : base(IPAddress.Parse(ConfigsTools.GetConfigs<Configs>().YeelightLampIp), 55443)
         {
             
         }
@@ -68,7 +68,7 @@ namespace NotifyToAction
             Task.Delay(600).ContinueWith(t => Blue());
             Task.Delay(800).ContinueWith(t => Red());
             Task.Delay(1000).ContinueWith(t => Default());
-            Task.Delay(1200).ContinueWith(t => Dispose());
+            Task.Delay(2000).ContinueWith(t => Dispose());
         }
     }
 }
