@@ -74,7 +74,7 @@
     </ApplicationDefinition>
     <Compile Include="Configs\Configs.cs" />
     <Compile Include="Configs\ConfigsTools.cs" />
-    <Compile Include="JsonClasses\Configs\RegisteredSenderTriggers.cs" />
+    <Compile Include="JsonClasses\Configs\RegisteredTriggerSenders.cs" />
     <Compile Include="Methods\PushbulletMethods.cs" />
     <Compile Include="Tools\Log.cs" />
     <Compile Include="Methods\Methods.cs" />

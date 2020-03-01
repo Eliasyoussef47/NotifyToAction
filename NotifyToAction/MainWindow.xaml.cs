@@ -36,15 +36,15 @@ namespace NotifyToAction
             //registeredTrigger.TriggerId = "DoorOpened";
             //RegisteredTriggerAction action = new RegisteredTriggerAction("YeelightMethods", "Toggle", null);
             //registeredTrigger.Actions.Add(action);
-            //RegisteredSenderTriggers registeredSenderTriggers = new RegisteredSenderTriggers();
-            //registeredSenderTriggers.SenderId = "DoorSensor";
+            //RegisteredTriggerSenders registeredTriggerSenders = new RegisteredTriggerSenders();
+            //registeredTriggerSenders.SenderId = "DoorSensor";
             //List<RegisteredTrigger> registeredTriggers = new List<RegisteredTrigger>();
             //registeredTriggers.Add(registeredTrigger);
-            //registeredSenderTriggers.RegisteredTriggers = registeredTriggers;
-            //configs.RegisteredSenderTriggers.Add(registeredSenderTriggers);
+            //registeredTriggerSenders.RegisteredTriggers = registeredTriggers;
+            //configs.RegisteredTriggerSenders.Add(registeredTriggerSenders);
             //configs.YeelightLampIp = "192.168.2.15";
             //configs.Save();
-            
+
             MessageHandler.Accept();
         }
 

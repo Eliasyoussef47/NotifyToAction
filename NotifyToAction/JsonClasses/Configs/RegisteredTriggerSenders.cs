@@ -5,12 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace NotifyToActionConsole
+namespace NotifyToAction
 {
-    class RegisteredSenderTriggers
+    class RegisteredTriggerSenders
     {
         [JsonConstructor]
-        public RegisteredSenderTriggers()
+        public RegisteredTriggerSenders()
         {
             SenderId = "";
             RegisteredTriggers = new List<RegisteredTrigger>();

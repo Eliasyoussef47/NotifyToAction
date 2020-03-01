@@ -12,7 +12,7 @@ namespace NotifyToActionConsole
     {
         public Configs()
         {
-            RegisteredSenderTriggers = new List<RegisteredSenderTriggers>();
+            RegisteredTriggerSenders = new List<RegisteredTriggerSenders>();
             Test = "";
         }
 
@@ -21,7 +21,7 @@ namespace NotifyToActionConsole
 
         public RegisteredTrigger GetRegisteredTrigger(string senderId, string triggerId)
         {
-            RegisteredSenderTriggers registeredSenderTriggers = RegisteredSenderTriggers.Find(x => x.SenderId.Equals(senderId));
+            RegisteredTriggerSenders registeredSenderTriggers = RegisteredTriggerSenders.Find(x => x.SenderId.Equals(senderId));
             if (registeredSenderTriggers == null)
             {
                 return null;
@@ -31,8 +31,14 @@ namespace NotifyToActionConsole
         }
 
 
-        [JsonProperty("registeredSenderTriggers")]
-        public List<RegisteredSenderTriggers> RegisteredSenderTriggers { get; set; }
+        [JsonProperty("registeredTriggerSenders", Required = Required.AllowNull)]
+        public List<RegisteredTriggerSenders> RegisteredTriggerSenders { get; set; }
+
+        [JsonProperty("yeelightLampIp", Required = Required.Default)]
+        public string YeelightLampIp { get; set; }
+
+        [JsonProperty("pushbulletAccessToken", Required = Required.AllowNull)]
+        public string PushbulletAccessToken { get; set; }
 
         [JsonProperty("test", Required = Required.AllowNull)]
         public string Test { get; set; }
